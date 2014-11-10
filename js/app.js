@@ -11,4 +11,6 @@
             console.log('after')
         }
     });
+    bngDemo.controller('WellDemo', function($scope) {
+    });
 })();
