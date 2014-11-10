@@ -4,7 +4,7 @@ directives.Alert = function() {
     return {
         restrict: 'E',
         transclude: true,
-        templateUrl: options.template_dir + 'alert.html',
+        templateUrl: utils.getTemplate('alert'),
         scope: {
             closeBsAlert: '&',
             closedBsAlert: '&'
@@ -23,16 +23,26 @@ directives.Well = function() {
     return {
         restrict: 'E',
         transclude: true,
-        templateUrl: options.template_dir + 'well.html',
+        templateUrl: utils.getTemplate('well'),
         link: function(scope, el, attrs) {
-            scope.size = attrs.size !== undefined && attrs.size === "small" ? 'sm' : 'lg';
+            scope.size = attrs.size === 'small' ? 'sm' : 'lg';
+        }
+    }
+};
+directives.Label = function() {
+    return {
+        restrict: 'E',
+        transclude: true,
+        templateUrl: utils.getTemplate('label'),
+        link: function(scope, el, attrs) {
+            scope.type = attrs.type ? attrs.type : 'default';
         }
     }
 };
 directives.Button = function() {
     return {
         restrict: 'E',
-        templateUrl: options.template_dir + 'button.html',
+        templateUrl: utils.getTemplate('button'),
         scope: {},
         link: function(scope, el, attrs) {
         }
@@ -43,9 +53,13 @@ bng.directive('bngAlert', directives.Alert);
 bng.directive('btn', directives.Button);
 bng.directive('bngButton', directives.Button);
 bng.directive('well', directives.Well);
+bng.directive('bngLabel', directives.Label);
 
 /*----------- Utils -------------*/
 var utils = {
+    getTemplate: function(name) {
+        return options.template_dir + name + '.html';
+    },
     toSet: function(arr) {
         var tmp = {};
         for(var i = 0; i < arr.length; i++) {
