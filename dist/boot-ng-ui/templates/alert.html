@@ -1,0 +1,7 @@
+<div id="{{id}}" class="alert alert-{{type}} {{class}}">
+    <span ng-transclude></span>
+    <button ng-if="dismissible == true" type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+    </button>
+</div>

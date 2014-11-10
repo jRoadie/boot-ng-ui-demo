@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="bng-demo">
+<head>
+    <title>boot-ng-ui demo</title>
+    <link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.min.css"/>
+    <!-- using uncompressed js for dev mode. use compressed js for production -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="dist/boot-ng-ui/boot-ng-ui.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</head>
+<body>
+<div class="container">
+    <div ng-controller="AlertDemo">
+        <alert type="danger" class="fade in" dismissible="true" close-bs-alert="beforeClose()">message</alert>
+        <alert type="info" dismissible="false">mess--</alert>
+    </div>
+</div>
+</body>
+</html>
