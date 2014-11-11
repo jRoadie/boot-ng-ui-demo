@@ -1,6 +1,6 @@
 (function() {
     window.options = {
-        template_dir:  location.pathname + 'dist/boot-ng-ui/templates/'
+        template_dir:  location.pathname + 'boot-ng-ui/templates/'
     };
     var bngDemo = angular.module('bng-demo', ['boot-ng-ui']);
     bngDemo.controller('AlertDemo', function($scope) {
