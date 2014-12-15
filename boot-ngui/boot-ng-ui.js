@@ -1,5 +1,5 @@
 (function() {
-    var bng = angular.module('boot-ng-ui', []);
+    var bng = angular.module('boot-ngui', []);
     var directives = bng.directives = {};
     directives.GlyphIcon = function() {
         return {

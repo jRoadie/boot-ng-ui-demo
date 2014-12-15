@@ -1,8 +1,8 @@
 (function() {
     window.options = {
-        template_dir:  location.pathname + 'boot-ng-ui/templates/'
+        template_dir:  location.pathname + 'boot-ngui/templates/'
     };
-    var bngDemo = angular.module('bng-demo', ['boot-ng-ui']);
+    var bngDemo = angular.module('bng-demo', ['boot-ngui']);
     bngDemo.controller('AlertDemo', function($scope) {
         $scope.beforeClose = function() {
             alert('before')
